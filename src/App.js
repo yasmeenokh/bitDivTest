@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Header from "@bit/yasmeen.uic.header";
+// import { Card } from "@jfriday464/learningbit.ui.card";
+import FooterComponent from "@yasmeen/reusablecomponents.footer";
 function App() {
+  let navigationArray = [
+    {link : 'https://www.virginmobile.ae/',
+      text : 'Virgin Home'
+    },
+    {link : 'https://www.virginmobile.ae/tourist-sim/',
+      text : 'Tourist Sim'
+    },
+    {link : 'https://www.virginmobile.ae/double-data/',
+      text : 'Promotions'
+    },
+    {link : 'https://www.virginmobile.ae/help/',
+      text : 'Help'
+    },
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header
+      logo="../assets/icons8-sigma-64.png"
+      navigationArray={navigationArray}
+      />
+    <FooterComponent
+    footerText="This Footer Is A Private Component"
+    />
     </div>
   );
 }
